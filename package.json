@@ -56,7 +56,7 @@
     "dev": "babel -L -D -w src/ --out-dir lib/",
     "lint": "eslint src/**",
     "plaintest": "mocha --check-leaks -b -R spec test/index.js && npm run tape",
-    "prepublish": "npm run build",
+    "preinstall": "npm run build",
     "tape": "node test/tape/index.js | tap-spec",
     "test": "npm run lint && npm run babel && istanbul --config=test/.istanbul.yml cover node_modules/mocha/bin/_mocha -- --check-leaks -b -R spec test/index.js && npm run tape && (npm run build && echo BUILD TEST OK || echo BUILD TEST FAILED)"
   },
